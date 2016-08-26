@@ -91,7 +91,7 @@ public class FXMLDocumentController implements Initializable {
 
     private void aggiornaTemp() {
         tSetTemp.setText(Double.toString(c.getCount()));
-        System.out.println(c.getCount());
+        //System.out.println(c.getCount());
     }
 
 }
