@@ -5,7 +5,7 @@
  */
 package jfxmenucasa;
 
-import java.awt.TextField;
+import javafx.scene.control.TextField;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -25,8 +25,8 @@ public class FXMLDocumentController implements Initializable {
     private Label lIPNumber;
     @FXML
     private Label lActTemp;
-    //@FXML
-    //private TextField tSetTemperatura;
+    @FXML
+    private TextField tSetTemp;
 
     @FXML
     private Label lActUmid;
@@ -61,14 +61,16 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void handlePiuCount(ActionEvent event) {
-//        c.incrementa();
-//        tSetTemp.setText(String.valueOf(c.getCount()));
+        c.incrementa();
+        
+        System.out.println(c.getCount());
     }
 
     @FXML
     private void handleMenoCount(ActionEvent event) {
-//        c.decrementa();
-//        tSetTemp.setText(String.valueOf(c.getCount()));
+        c.decrementa();
+        
+        System.out.println(c.getCount());
     }
 
     @Override
