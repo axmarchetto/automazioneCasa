@@ -61,16 +61,16 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void handlePiuCount(ActionEvent event) {
+
         c.incrementa();
-        
-        System.out.println(c.getCount());
+
+        aggiornaTemp();
     }
 
     @FXML
     private void handleMenoCount(ActionEvent event) {
         c.decrementa();
-        
-        System.out.println(c.getCount());
+        aggiornaTemp();
     }
 
     @Override
@@ -87,6 +87,11 @@ public class FXMLDocumentController implements Initializable {
         lActUmid.setText(trm.getActUmid());
         lSetTemp.setText(trm.getSetTemp());
 
+    }
+
+    private void aggiornaTemp() {
+        tSetTemp.setText(Double.toString(c.getCount()));
+        System.out.println(c.getCount());
     }
 
 }
